@@ -9,8 +9,8 @@ body, html {
 
 /*Latihan 1*/
 .container-satu {
-    width: 100%;
-    margin: 5px;
+    width: 60%;
+    margin: 5px auto;
     background-color: #c3ff8a;
     padding: 20px;
     box-sizing: border-box;
