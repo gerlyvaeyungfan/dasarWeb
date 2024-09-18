@@ -51,3 +51,24 @@ foreach ($daftarNilai[$mataKuliah] as $mahasiswa) {
 }
 
 echo "<br><br>";
+
+$daftarNilai = [
+    ['Alice', 85],
+    ['Bob', 92],
+    ['Charlie', 78],
+    ['David', 64],
+    ['Eva', 90]
+];
+
+$totalNilai = 0;
+foreach ($daftarNilai as $mahasiswa) {
+    $totalNilai += $mahasiswa[1];
+    $avg = $totalNilai / count($daftarNilai);
+}
+
+foreach ($daftarNilai as $mahasiswa) {
+    if ($mahasiswa[1] < $avg) {
+        continue;
+    }
+    echo "Mahasiswa: {$mahasiswa[0]}, Nilai: {$mahasiswa[1]} <br>";
+}
