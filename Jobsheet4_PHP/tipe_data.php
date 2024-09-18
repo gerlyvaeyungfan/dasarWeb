@@ -9,4 +9,11 @@ echo "Variabel b: {$b} <br>";
 echo "Variabel c: ($c) <br>";
 echo "Variabel d: ($d} <br>";
 echo "Variabel e: {$e} <br>";
-var_dump($e) ;
+var_dump($e);
+echo "<br>";
+
+$apakahSiswaLulus = true;
+$apakahSiswaSudahUjian = false;
+var_dump ($apakahSiswaLulus);
+echo "<br>";
+var_dump($apakahSiswaSudahUjian);
