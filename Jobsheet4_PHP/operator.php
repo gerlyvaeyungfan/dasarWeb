@@ -38,3 +38,16 @@ $hasilNotA = !$a;
 echo "Hasil dari tidak sama dengan $a adalah : $hasilNotA<br>";
 $hasilNotB = !$b;
 echo "Hasil dari tidak sama dengan $b adalah : $hasilNotB<br>";
+
+echo"<h3>Operator Penugasan<br></h3>";
+$c = $a += $b;
+echo "Hasil dari penugasan 10 += $b adalah $c<br>";
+$d = $a -= $b;
+echo "Hasil dari penugasan $c -= $b adalah $d<br>";
+$e = $a *= $b;
+echo "Hasil dari penugasan $d *= $b adalah $e<br>";
+$f = $a /= $b;
+echo "Hasil dari penugasan $e /= $b adalah $f<br>";
+$g = $a %= $b;
+echo "Hasil dari penugasan $f %= $b adalah $g<br>";
+echo "<br><br><br><br>";
