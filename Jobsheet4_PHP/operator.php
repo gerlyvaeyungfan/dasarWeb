@@ -1,6 +1,7 @@
 <?php
 $a = 10;
 $b = 5;
+echo"<h3>Operator Aritmatika<br></h3>";
 $hasilTambah = $a + $b;
 echo "Hasil penjumlahan $a dan $b adalah : $hasilTambah<br>";
 $hasilKurang = $a - $b;
@@ -13,6 +14,8 @@ $sisaBagi = $a % $b;
 echo "Hasil sisa bagi dari $a dan $b adalah : $sisaBagi<br>";
 $pangkat = $a ** $b;
 echo "Hasil perpangkatan dari $a pangkat $b adalah : $pangkat<br>";
+
+echo"<h3>Operator Perbandingan<br></h3>";
 $hasilSama = $a == $b;
 echo "Hasil dari $a sama dengan $b adalah : $hasilSama<br>";
 $hasilTidakSama = $a != $b;
@@ -25,3 +28,13 @@ $hasilLebihKecilSama = $a <- $b;
 echo "Hasil dari $a lebih kecil sama dengan $b adalah : $hasilLebihKecilSama<br>";
 $hasilLebihBesarSama = $a >= $b;
 echo "Hasil dari $a lebih besar sama dengan $b adalah : $hasilLebihBesarSama<br>";
+
+echo"<h3>Operator Logika<br></h3>";
+$hasilAnd = $a && $b;
+echo "Hasil penugasan AND dari $a dan $b adalah : $hasilAnd<br>";
+$hasilOr = $a || $b;
+echo "Hasil penugasan atau dari $a dan $b adalah : $hasilOr<br>";
+$hasilNotA = !$a;
+echo "Hasil dari tidak sama dengan $a adalah : $hasilNotA<br>";
+$hasilNotB = !$b;
+echo "Hasil dari tidak sama dengan $b adalah : $hasilNotB<br>";
