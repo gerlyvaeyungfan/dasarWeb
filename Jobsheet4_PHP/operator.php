@@ -43,11 +43,20 @@ echo"<h3>Operator Penugasan<br></h3>";
 $c = $a += $b;
 echo "Hasil dari penugasan 10 += $b adalah $c<br>";
 $d = $a -= $b;
-echo "Hasil dari penugasan $c -= $b adalah $d<br>";
+echo "Hasil dari penugasan $d -= $b adalah $d<br>";
 $e = $a *= $b;
 echo "Hasil dari penugasan $d *= $b adalah $e<br>";
 $f = $a /= $b;
 echo "Hasil dari penugasan $e /= $b adalah $f<br>";
 $g = $a %= $b;
 echo "Hasil dari penugasan $f %= $b adalah $g<br>";
+
+$a = 10;
+$b = 5;
+$hasilIdentik = $a === $b;
+$hasilTidakIdentik = $a !== $b;
+echo"<h3>Operator Identik<br></h3>";
+echo "Hasil identik dari $a dan $b adalah $hasilIdentik<br>";
+echo "Hasil tidak identik dari $a dan $b adalah $hasilTidakIdentik<br>";
+
 echo "<br><br><br><br>";
