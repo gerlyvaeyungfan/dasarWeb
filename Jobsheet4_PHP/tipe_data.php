@@ -28,6 +28,8 @@ $namaLengkap2 = $namaDepan . ' ' . $namaBelakang;
 echo "Nama Depan: {$namaDepan} <br>";
 echo 'Nama Belakang: ' . $namaBelakang . '<br>';
 echo $namaLengkap;
+echo "<br>";
+echo $namaLengkap2;
 echo "<br><br>";
 
 $listMahasiswa = ["Wahid Abdullah", "Elmo Bachtiar", "Lendis Fabri"];
