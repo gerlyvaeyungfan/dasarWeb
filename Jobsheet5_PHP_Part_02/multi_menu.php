@@ -1,36 +1,21 @@
 <?php
-$menu = [
-  [
-    "nama" => "Beranda"
-  ],
-  [
-    "nama" => "Berita",
-    "subMenu" => [
-      [
-        "nama" => "Wisata",
+$menu =
+[
+  ["nama" => "Beranda"],
+  ["nama" => "Berita",
+    "subMenu" => 
+    [
+      ["nama" => "Wisata",
         "subMenu" => [
-          [
-            "nama" => "Pantai"
-          ],
-          [
-            "nama" => "Gunung"
-          ]
+          ["nama" => "Pantai"],
+          ["nama" => "Gunung"]
         ]
       ],
-      [
-        "nama" => "Kuliner"
-      ],
-      [
-        "nama" => "Hiburan"
-      ]
+      ["nama" => "Kuliner"], ["nama" => "Hiburan"]
     ]
   ],
-  [
-    "nama" => "Tentang"
-  ],
-  [
-    "nama" => "Kontak"
-  ],
+  ["nama" => "Tentang"],
+  ["nama" => "Kontak"],
 ];
 
 function tampilkanMenuBertingkat(array $menu) {
