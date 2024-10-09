@@ -24,7 +24,6 @@
 
         <input type="submit" value="Submit">
     </form>
-
     <div id="hasil"></div>
 
     <script>
