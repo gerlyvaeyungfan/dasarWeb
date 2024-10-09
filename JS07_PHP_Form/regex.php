@@ -6,7 +6,7 @@
     <title>Pattern Matching</title>
 </head>
 <body>
-    <h2>Hasil Pattern Matching</h2>
+    <h2>Hasil Pattern</h2>
 
     <?php
     // Pencarian huruf kecil
@@ -40,6 +40,14 @@
     echo "<p>Sebelum: '$text'</p>";
     echo "<p>Sesudah: '$new_text'</p>";
 
+    $pattern = '/go*d/';
+    $text = 'God is good.';
+    echo "<h3>Text: '$text'</h3>";
+    if (preg_match($pattern, $text, $matches)) {
+        echo "<p'>Cocokkan: " . $matches[0] . "</p>";
+    } else {
+        echo "<p>Tidak ada yang cocok</p>";
+    }
     ?>
 </body>
 </html>
