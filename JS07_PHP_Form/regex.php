@@ -2,7 +2,6 @@
 <html lang="id">
 <head>
     <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Pattern Matching</title>
 </head>
@@ -31,6 +30,16 @@
     } else {
         echo "<p>Tidak ada yang cocok</p>";
     }
+
+    // Penggantian kata "apple" dengan "banana"
+    $pattern = '/apple/';
+    $replacement = 'banana';
+    $text = 'I like apple pie.';
+    $new_text = preg_replace($pattern, $replacement, $text);
+    echo "<h3>Penggantian Kata</h3>";
+    echo "<p>Sebelum: '$text'</p>";
+    echo "<p>Sesudah: '$new_text'</p>";
+
     ?>
 </body>
 </html>
