@@ -2,10 +2,11 @@
 <html>
 <head>
 <title>Contoh Form dengan PHP</title>
+<script src="../JS06_jQuery/jquery-3.7.1.js"></script>
 </head>
 <body>
 <h2>Form Contoh</h2>
-<form method="POST" action="proses_lanjut.php">
+<form id="myForm">
 <label for="buah">Pilih Buah:</label>
 <select name="buah" id="buah">
     <option value="apel">Apel</option>
@@ -26,27 +27,28 @@
 <input type="submit" value="Submit">
 </form>
 
-<?php
-if ($_SERVER["REQUEST_METHOD"] == "POST") {
-    $selectedBuah = $_POST['buah'];
+<div id="hasil">
 
-    if (isset($_POST['warna'])) {
-        $selectedWarna = $_POST['warna'];
-    } else {
-        $selectedWarna = [];
-    }
-    $selectedJenisKelamin = $_POST['jenis_kelamin'];
+</div>
 
-    echo "Anda memilih buah: " . $selectedBuah . "<br>";
+<script>
+    $(document).ready(function () {
+        $("#myForm").submit(function (e) {
+            e.preventDefault();
 
-    if (!empty($selectedWarna)) {
-        echo "Warna favorit Anda: " . implode(", ", $selectedWarna) . "<br>";
-    } else {
-        echo "Anda tidak memilih warna favorit.<br>";
-    }
-    
-    echo "Jenis kelamin Anda: " . $selectedJenisKelamin;
-}
-?>
+            var formData = $("#myForm").serialize();
+
+            $.ajax({
+                url: "proses_lanjut.php",
+                type: "POST",
+                data: formData,
+                success: function (response) {
+                    $("#hasil").html(response);
+                }
+            });
+        });
+    });
+</script>
+
 </body>
 </html>
