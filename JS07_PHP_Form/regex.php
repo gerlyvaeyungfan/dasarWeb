@@ -40,7 +40,7 @@
     echo "<p>Sebelum: '$text'</p>";
     echo "<p>Sesudah: '$new_text'</p>";
 
-    $pattern = '/go*d/';
+    $pattern = '/go?d/i';
     $text = 'God is good.';
     echo "<h3>Text: '$text'</h3>";
     if (preg_match($pattern, $text, $matches)) {
