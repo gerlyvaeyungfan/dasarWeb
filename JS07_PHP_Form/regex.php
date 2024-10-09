@@ -40,7 +40,7 @@
     echo "<p>Sebelum: '$text'</p>";
     echo "<p>Sesudah: '$new_text'</p>";
 
-    $pattern = '/go?d/i';
+    $pattern = '/go{2,3}d/i'; //'o' muncul minimal 1 kali, maksimal 2 kali
     $text = 'God is good.';
     echo "<h3>Text: '$text'</h3>";
     if (preg_match($pattern, $text, $matches)) {
