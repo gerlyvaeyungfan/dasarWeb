@@ -4,7 +4,7 @@
             <h2> Keranjang Belanja </h2>
 
             <?php
-                $beliNovel=$_COOKIE['beliNOvel'];
+                $beliNovel=$_COOKIE['beliNovel'];
                 $beliBuku=$_COOKIE['beliBUku'];
 
                 echo "Jumlah Novel: " . $beliNovel ."<br>";
