@@ -5,10 +5,10 @@
 
             <?php
                 $beliNovel=$_COOKIE['beliNovel'];
-                $beliBuku=$_COOKIE['beliBUku'];
+                $beliBuku=$_COOKIE['beliBuku'];
 
                 echo "Jumlah Novel: " . $beliNovel ."<br>";
-                echo "Jumlah Buku". $beliBuku;
+                echo "Jumlah Buku: ". $beliBuku;
             ?>
         </body>
     </head>
