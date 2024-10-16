@@ -6,9 +6,13 @@ if(isset($_POST["submit"])){
 
     $allowedExtensions = array("jpg", "jpeg", "png", "gif");
     $maxsize = 5*1024*1024;
+
     if (in_array($fileType, $allowedExtensions) && $_FILES["myfile"]["size"] <= $maxsize) {
         if(move_uploaded_file($_FILES["myfile"]["tmp_name"], $targetfile)) {
             echo "File berhasil diunggah.";
+            
+            // Tampilkan gambar thumbnail setelah berhasil diunggah
+            echo "<br><img src='".$targetfile."' width='200' alt='Thumbnail'>";
         } else {
             echo "Gagal mengunggah file.";
         }
@@ -16,4 +20,3 @@ if(isset($_POST["submit"])){
         echo "File tidak valid atau melebihi ukuran maksimum yang diizinkan.";
     }
 }
-?>
