@@ -17,3 +17,4 @@ if(isset($_POST["submit"])) {
         echo "File tidak valid atau melebihi ukuran maksimum yang diizinkan.";
     }
 }
+?>
