@@ -14,6 +14,16 @@ include 'auth.php';
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css">
     <!-- DataTables CSS -->
     <link rel="stylesheet" href="https://cdn.datatables.net/1.10.19/css/dataTables.bootstrap4.min.css">
+    <style>
+        .footer {
+            position: fixed;
+            bottom: 0;
+            width: 100%;
+            padding: 15px 0;
+            background-color: #fff;
+            color: #6c757d;
+        }
+    </style>
 </head>
 <body>
     <nav class="navbar navbar-dark bg-primary">
@@ -60,9 +70,9 @@ include 'auth.php';
         </form>
         <hr>
         <div class="data mt-4"></div>
-        <div class="text-center mt-4">
-            &copy; <?php echo date('Y'); ?> Copyright: <a href="https://google.com">Desain Dan Pemrograman Web</a>
-        </div>
+    </div>
+    <div class="footer text-center">
+        &copy; <?php echo date('Y'); ?> Copyright: <a href="https://google.com">Desain Dan Pemrograman Web</a>
     </div>
     <!-- jQuery and JavaScript dependencies -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
