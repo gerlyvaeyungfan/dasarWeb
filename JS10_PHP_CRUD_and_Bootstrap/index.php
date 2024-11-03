@@ -71,14 +71,55 @@ include 'auth.php';
 
         <script type="text/javascript">
             $(document).ready(function() {
-            // Mengirimkan Token Keamanan
-            $.ajaxSetup({
-                headers: {
-                    'Csrf-Token': $('meta[name="csrf-token"]').attr('content')
+                // Mengirimkan Token Keamanan
+                $.ajaxSetup({
+                    headers: {
+                        'Csrf-Token': $('meta[name="csrf-token"]').attr('content')
+                    }
+                });
+                $('.data').load("data.php");
+            });
+            $('#simpan').click(function(){
+                var data = $('.form-data').serialize();
+                var nama = document.getElementById("nama").value;
+                var alamat = document.getElementById("alamat").value;
+                var no_telp = document.getElementById("no_telp").value;
+                if (nama == "") {
+                    document.getElementById("err_nama").innerHTML = "Nama Harus Diisi";
+                } else {
+                    document.getElementById("err_nama").innerHTML = "";
+                }
+                if (alamat == "") {
+                    document.getElementById("err_alamat").innerHTML = "Alamat Harus Diisi";
+                } else {
+                    document.getElementById("err_alamat").innerHTML = "";
+                }
+                if (!document.getElementById("jkel1").checked && !document.getElementById("jkel2").checked) {
+                    document.getElementById("err_jenis_kelamin").innerHTML = "Jenis Kelamin Harus Dipilih";
+                } else {
+                    document.getElementById("err_jenis_kelamin").innerHTML = "";
+                }
+                if (no_telp == "") {
+                    document.getElementById("err_no_telp").innerHTML = "No Telepon Harus Diisi";
+                } else {
+                    document.getElementById("err_no_telp").innerHTML = "";
+                }
+                if (nama != "" && alamat != "" && (document.getElementById("jkel1").checked || document.getElementById("jkel2").checked) && no_telp != "") {
+                    $.ajax({
+                        type: 'POST',
+                        url: "form_Action.php",
+                        data: data,
+                        success: function() {
+                            $('.data').load("data.php");
+                            document.getElementById("id").value = "";
+                            document.getElementById("form-data").reset();
+                        },
+                        error: function(response) {
+                            console.log(response.responseText);
+                        }
+                    });
                 }
             });
-            $('.data').load("data.php");
-        });
         </script>
     </body>
 </html>
