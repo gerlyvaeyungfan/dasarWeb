@@ -14,9 +14,10 @@
         include 'koneksi.php';
         $no = 1;
         $query = "SELECT * FROM anggota ORDER BY id DESC";
-        $sql = $dbl->prepare($query);
+        $sql = $db1->prepare($query);
         $sql->execute();
         $res1 = $sql->get_result();
+
         if ($res1->num_rows > 0) {
             while ($row = $res1->fetch_assoc()) {
                 $id = $row['id'];
@@ -45,23 +46,26 @@
         } else {
         ?>
         <tr>
-            <td colspan="7">Tidak ada data ditemukan</td>
+            <td colspan="6" class="text-center">Tidak ada data ditemukan</td>
         </tr>
         <?php
         }
         ?>
     </tbody>
 </table>
+
 <script type="text/javascript">
     $(document).ready(function() {
         $('#example').DataTable();
     });
+
     function reset(){
         document.getElementById("err_nama").innerHTML ="";
         document.getElementById("err_jenis_kelamin").innerHTML ="";
         document.getElementById("err_alamat").innerHTML ="";
         document.getElementById("err_no_telp").innerHTML ="";
     }
+
     $(document).on('click', '.edit_data', function(){
         $('html,body').animate({scrollTop: 0}, 'slow');
         var id =$(this).attr('id');
@@ -87,8 +91,6 @@
             }
         });
     });
-
-    //Praktikum 6 Langkah 28
     $(document). on('click','.hapus_data', function(){
         var id = $(this).attr('id')
         $.ajax({
