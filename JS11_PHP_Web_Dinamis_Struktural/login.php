@@ -1,13 +1,4 @@
 <?php
-function get_flashdata($key) {
-    if (isset($_SESSION['_flashdata'][$key])) {
-        $message = $_SESSION['_flashdata'][$key];
-        // Hapus pesan setelah ditampilkan
-        unset($_SESSION['_flashdata'][$key]);
-        return '<div class="alert alert-info">' . $message . '</div>';
-    }
-    return '';
-}
 if (session_status() === PHP_SESSION_NONE)
     session_start();
 
