@@ -16,19 +16,18 @@ mysqli_close($koneksi);
 $salt = $row['salt'];
 $hashed_password = $row['hashed_password'];
 
-if ($salt !== null && $hashed_password !== null) {
+if ($salt !== null && $hashed_password !== null){
     $combined_password = $salt . $password;
 
     if (password_verify($combined_password, $hashed_password)) {
-        $_SESSION['username'] = $row['username'];
-        $_SESSION['level'] = $row['level'];
+        $_SESSION ['username'] = $row['username'];
+        $_SESSION['level' ]= $row['level'];
         header("Location: index.php");
     } else {
-        pesan('danger', 'Login gagal. Password Anda Salah.');
+        pesan('danger', "Login gagal. Password Anda Salah.");
         header("Location: login.php");
     }
 } else {
-    pesan('warning', 'Username tidak ditemukan.');
+    pesan('warning', "Username tidak ditemukan.");
     header("Location: login.php");
 }
-?>

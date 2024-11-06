@@ -4,6 +4,7 @@ if (session_status() === PHP_SESSION_NONE)
 
 include "fungsi/pesan_kilat.php";
 ?>
+
 <!doctype html>
 <html lang="en" data-bs-theme="auto">
 
@@ -15,7 +16,7 @@ include "fungsi/pesan_kilat.php";
     <meta name="description" content="">
     <meta name="author" content="Mark Otto, Jacob Thornton, and Bootstrap contributors">
     <meta name="generator" content="Hugo 0.118.2">
-    <title>Aplikasi Kantor Gerly</title>
+    <title>Aplikasi Kantor Siapa</title>
 
     <link rel="canonical" href="https://getbootstrap.com/docs/5.3/examples/sign-in/">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@docsearch/css@3">
@@ -30,7 +31,8 @@ include "fungsi/pesan_kilat.php";
             -moz-user-select: none;
             user-select: none;
         }
-	@media (min-width: 768px) {
+
+        @media (min-width: 768px) {
             .bd-placeholder-img-lg {
                 font-size: 3.5rem;
             }
@@ -107,7 +109,7 @@ include "fungsi/pesan_kilat.php";
 <body class="d-flex align-items-center py-4 bg-body-tertiary">
     <svg xmlns="http://www.w3.org/2000/svg" class="d-none">
         <symbol id="check2" viewBox="0 0 16 16">
-	<path d="M13.854 3.646a.5.5 0 0 1 0 .708l-7 7a.5.5 0 0 1-.708 0l-3.5-3.5a.5.5 0 1 1 .708-.708L6.5 10.293l6.646-6.647a.5.5 0 0 1 .708 0z" />
+            <path d="M13.854 3.646a.5.5 0 0 1 0 .708l-7 7a.5.5 0 0 1-.708 0l-3.5-3.5a.5.5 0 1 1 .708-.708L6.5 10.293l6.646-6.647a.5.5 0 0 1 .708 0z" />
         </symbol>
         <symbol id="circle-half" viewBox="0 0 16 16">
             <path d="M8 15A7 7 0 1 0 8 1v14zm0 1A8 8 0 1 1 8 0a8 8 0 0 1 0 16z" />
@@ -164,6 +166,7 @@ include "fungsi/pesan_kilat.php";
             </li>
         </ul>
     </div>
+
     <main class="form-signin w-100 m-auto">
         <form action="cek_login.php" method="post">
             <img class="mb-4" src="assets/brand/bootstrap-logo.svg" alt="" width="72" height="57">
@@ -188,7 +191,5 @@ include "fungsi/pesan_kilat.php";
         </form>
     </main>
     <script src="assets/dist/js/bootstrap.bundle.min.js"></script>
-
 </body>
-
 </html>
