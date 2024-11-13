@@ -1,76 +1,76 @@
 <?php
-class Car
-{
-    private $model;
-    private $color;
+// class Car
+// {
+//     private $model;
+//     private $color;
 
-    public function __construct($model, $color)
-    {
-        $this->model = $model;
-        $this->color = $color;
-    }
+//     public function __construct($model, $color)
+//     {
+//         $this->model = $model;
+//         $this->color = $color;
+//     }
 
-    public function getModel()
-    {
-        return $this->model;
-    }
+//     public function getModel()
+//     {
+//         return $this->model;
+//     }
 
-    public function setColor($color)
-    {
-        $this->color = $color;
-    }
+//     public function setColor($color)
+//     {
+//         $this->color = $color;
+//     }
 
-    public function getColor()
-    {
-        return $this->color;
-    }
-}
+//     public function getColor()
+//     {
+//         return $this->color;
+//     }
+// }
 
-$car = new Car("Toyota", "Blue");
+// $car = new Car("Toyota", "Blue");
 
-echo "Model: " . $car->getModel() . "<br>";
-echo "Color: " . $car->getColor() . "<br>";
+// echo "Model: " . $car->getModel() . "<br>";
+// echo "Color: " . $car->getColor() . "<br>";
 
-$car->setColor("Red");
-echo "Updated Color: " . $car->getColor() . "<br>";
+// $car->setColor("Red");
+// echo "Updated Color: " . $car->getColor() . "<br>";
 
 
-class Animal {
-    protected $name;
+// class Animal {
+//     protected $name;
 
-    public function __construct($name) {
-        $this->name = $name;
-    }
+//     public function __construct($name) {
+//         $this->name = $name;
+//     }
 
-    public function eat() {
-        echo $this->name . " is eating.<br>";
-    }
+//     public function eat() {
+//         echo $this->name . " is eating.<br>";
+//     }
 
-    public function sleep() {
-        echo $this->name . " is sleeping.<br>";
-    }
-}
+//     public function sleep() {
+//         echo $this->name . " is sleeping.<br>";
+//     }
+// }
 
-class Cat extends Animal {
-    public function meow() {
-        echo $this->name . " saya meow!<br>";
-    }
-}
+// class Cat extends Animal {
+//     public function meow() {
+//         echo $this->name . " saya meow!<br>";
+//     }
+// }
 
-class Dog extends Animal {
-    public function bark() {
-        echo $this->name . " saya woof!<br>";
-    }
-}
+// class Dog extends Animal {
+//     public function bark() {
+//         echo $this->name . " saya woof!<br>";
+//     }
+// }
 
-$cat = new Cat("Whiskers");
-$dog = new Dog("Buddy");
+// $cat = new Cat("Whiskers");
+// $dog = new Dog("Buddy");
 
-$cat->eat();
-$dog->sleep();
+// $cat->eat();
+// $dog->sleep();
 
-$cat->meow();
-$dog->bark();
+// $cat->meow();
+// $dog->bark();
 
 // interface Shape
 // {
@@ -120,38 +120,119 @@ $dog->bark();
 // printArea($circle);
 // printArea($rectangle);
 
-abstract class Shape {
-    abstract public function calculateArea();
+// abstract class Shape {
+//     abstract public function calculateArea();
+// }
+
+// class Circle extends Shape {
+//     private $radius;
+
+//     public function __construct($radius) {
+//         $this->radius = $radius;
+//     }
+
+//     public function calculateArea(){
+//         return pi() * pow($this->radius, 2);
+//     }
+// }
+
+// class Rectangle extends Shape {
+//     private $width;
+//     private $height;
+
+//     public function __construct($width, $height) {
+//         $this->width = $width;
+//         $this->height = $height;
+//     }
+
+//     public function calculateArea() {
+//         return $this->width * $this->height;
+//     }
+// }
+
+// $circle = new Circle(5);
+// $rectangle = new Rectangle(4, 6);
+
+// echo "Area of Circle: " . $circle->calculateArea() . "<br>";
+// echo "Area of Rectangle: " . $rectangle->calculateArea() . "<br>";
+
+// interface Shape {
+//     public function calculateArea();
+// }
+
+// interface Color {
+//     public function getColor();
+// }
+
+// class Circle implements Shape, Color {
+//     private $radius;
+//     private $color;
+
+//     public function __construct($radius, $color) {
+//         $this->radius = $radius;
+//         $this->color = $color;
+//     }
+
+//     public function calculateArea() {
+//         return pi() * pow($this->radius, 2);
+//     }
+
+//     public function getColor() {
+//         return $this->color;
+//     }
+// }
+
+// $circle = new Circle(5, "Blue");
+
+// echo "Area of Circle: " . $circle->calculateArea() . "<br>";
+// echo "Color of Circle: " . $circle->getColor() . "<br>";
+
+// class Car {
+//     private $brand;
+
+//     public function __construct($brand) {
+//         echo "A new car is created.<br>";
+//         $this->brand = $brand;
+//     }
+
+//     public function getBrand() {
+//         return $this->brand;
+//     }
+
+//     public function __destruct() {
+//         echo "The car is destroyed.<br>";
+//     }
+// }
+
+// $car = new Car("Toyota");
+// echo "Brand: " . $car->getBrand() . "<br>";
+
+class Animal {
+    public $name;
+    protected $age;
+    private $color;
+
+    public function __construct($name, $age, $color) {
+        $this->name = $name;
+        $this->age = $age;
+        $this->color = $color;
+    }
+
+    public function getName() {
+        return $this->name;
+    }
+
+    protected function getAge() {
+        return $this->age;
+    }
+
+    private function getColor() {
+        return $this->color;
+    }
 }
 
-class Circle extends Shape {
-    private $radius;
+$animal = new Animal("Dog", 3, "Brown");
 
-    public function __construct($radius) {
-        $this->radius = $radius;
-    }
-
-    public function calculateArea(){
-        return pi() * pow($this->radius, 2);
-    }
-}
-
-class Rectangle extends Shape {
-    private $width;
-    private $height;
-
-    public function __construct($width, $height) {
-        $this->width = $width;
-        $this->height = $height;
-    }
-
-    public function calculateArea() {
-        return $this->width * $this->height;
-    }
-}
-
-$circle = new Circle(5);
-$rectangle = new Rectangle(4, 6);
-
-echo "Area of Circle: " . $circle->calculateArea() . "<br>";
-echo "Area of Rectangle: " . $rectangle->calculateArea() . "<br>";
+echo "Name: " . $animal->name . "<br>";
+echo "Age: " . $animal->getAge() . "<br>";
+echo "Color: " . $animal->getColor() . "<br>";
