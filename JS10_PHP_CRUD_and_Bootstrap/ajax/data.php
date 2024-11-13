@@ -14,7 +14,7 @@
         include 'koneksi.php';
         $no = 1;
         $query = "SELECT * FROM anggota ORDER BY id DESC";
-        $sql = $dbl->prepare($query);
+        $sql = $db1->prepare($query);
         $sql->execute();
         $result = $sql->get_result();
 
@@ -67,7 +67,7 @@
             scrollTop: 0
         }, 'slow');
         var id = $(this).attr('id');
-        console.log("ID yg dikirimke get_data", id); //DEBUG
+        console.log("ID yg dikirim ke get_data", id); //DEBUG
         $.ajax({
             type: 'POST',
             url: 'get_data.php',
