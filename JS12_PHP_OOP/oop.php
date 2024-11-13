@@ -156,56 +156,56 @@
 // echo "Area of Circle: " . $circle->calculateArea() . "<br>";
 // echo "Area of Rectangle: " . $rectangle->calculateArea() . "<br>";
 
-// interface Shape {
-//     public function calculateArea();
-// }
+interface Shape {
+    public function calculateArea();
+}
 
-// interface Color {
-//     public function getColor();
-// }
+interface Color {
+    public function getColor();
+}
 
-// class Circle implements Shape, Color {
-//     private $radius;
-//     private $color;
+class Circle implements Shape, Color {
+    private $radius;
+    private $color;
 
-//     public function __construct($radius, $color) {
-//         $this->radius = $radius;
-//         $this->color = $color;
-//     }
+    public function __construct($radius, $color) {
+        $this->radius = $radius;
+        $this->color = $color;
+    }
 
-//     public function calculateArea() {
-//         return pi() * pow($this->radius, 2);
-//     }
+    public function calculateArea() {
+        return pi() * pow($this->radius, 2);
+    }
 
-//     public function getColor() {
-//         return $this->color;
-//     }
-// }
+    public function getColor() {
+        return $this->color;
+    }
+}
 
-// $circle = new Circle(5, "Blue");
+$circle = new Circle(5, "Blue");
 
-// echo "Area of Circle: " . $circle->calculateArea() . "<br>";
-// echo "Color of Circle: " . $circle->getColor() . "<br>";
+echo "Area of Circle: " . $circle->calculateArea() . "<br>";
+echo "Color of Circle: " . $circle->getColor() . "<br>";
 
-// class Car {
-//     private $brand;
+class Car {
+    private $brand;
 
-//     public function __construct($brand) {
-//         echo "A new car is created.<br>";
-//         $this->brand = $brand;
-//     }
+    public function __construct($brand) {
+        echo "A new car is created.<br>";
+        $this->brand = $brand;
+    }
 
-//     public function getBrand() {
-//         return $this->brand;
-//     }
+    public function getBrand() {
+        return $this->brand;
+    }
 
-//     public function __destruct() {
-//         echo "The car is destroyed.<br>";
-//     }
-// }
+    public function __destruct() {
+        echo "The car is destroyed.<br>";
+    }
+}
 
-// $car = new Car("Toyota");
-// echo "Brand: " . $car->getBrand() . "<br>";
+$car = new Car("Toyota");
+echo "Brand: " . $car->getBrand() . "<br>";
 
 class Animal {
     public $name;
@@ -222,11 +222,11 @@ class Animal {
         return $this->name;
     }
 
-    protected function getAge() {
+    public function getAge() {
         return $this->age;
     }
 
-    private function getColor() {
+    public function getColor() {
         return $this->color;
     }
 }
