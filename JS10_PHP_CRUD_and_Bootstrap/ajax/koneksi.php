@@ -2,7 +2,7 @@
 define('HOST', 'localhost'); // biasanya localhost
 define('USER', 'root');       // user default di XAMPP biasanya 'root'
 define('PASSWORD', '');       // tidak ada password
-define('DATABASE', 'dasarweb'); // nama database
+define('DATABASE', 'prakwebdb'); // nama database
 
 $dbl = mysqli_connect(HOST, USER, PASSWORD, DATABASE);
 
