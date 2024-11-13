@@ -1,20 +1,39 @@
 <?php
-class Car {
-    public $brand;
+class Car
+{
+    private $model;
+    private $color;
 
-    public function startEngine() {
-        echo "Engine started!<br>";
+    public function __construct($model, $color)
+    {
+        $this->model = $model;
+        $this->color = $color;
+    }
+
+    public function getModel()
+    {
+        return $this->model;
+    }
+
+    public function setColor($color)
+    {
+        $this->color = $color;
+    }
+
+    public function getColor()
+    {
+        return $this->color;
     }
 }
 
-$car1 = new Car();
-$car1->brand = "Toyota";
+$car = new Car("Toyota", "Blue");
 
-$car2 = new Car();
-$car2->brand = "Honda";
+echo "Model: " . $car->getModel() . "<br>";
+echo "Color: " . $car->getColor() . "<br>";
 
-$car1->startEngine();
-echo $car2->brand . "<br>";
+$car->setColor("Red");
+echo "Updated Color: " . $car->getColor() . "<br>";
+
 
 class Animal {
     protected $name;
