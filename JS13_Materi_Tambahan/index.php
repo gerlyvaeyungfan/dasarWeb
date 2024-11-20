@@ -18,9 +18,9 @@ if ($session->get('is_login') !== true) {
   <!-- Font Awesome -->
   <link rel="stylesheet" href="adminlte/plugins/fontawesome-free/css/all.min.css">
   <!-- DataTables -->
-  <link rel="stylesheet" href="adminlte/plugins/datatablesbs4/css/dataTables.bootstrap4.min.css">
-  <link rel="stylesheet" href="adminlte/plugins/datatablesresponsive/css/responsive.bootstrap4.min.css">
-  <link rel="stylesheet" href="adminlte/plugins/datatablesbuttons/css/buttons.bootstrap4.min.css">
+  <link rel="stylesheet" href="adminlte/plugins/datatablesbs4/css/dataTables.bootstrap4.min.css">
+  <link rel="stylesheet" href="adminlte/plugins/datatablesresponsive/css/responsive.bootstrap4.min.css">
+  <link rel="stylesheet" href="adminlte/plugins/datatablesbuttons/css/buttons.bootstrap4.min.css">
   <!-- Theme style -->
   <link rel="stylesheet" href="adminlte/dist/css/adminlte.min.css">
   <!-- jQuery -->
@@ -93,8 +93,8 @@ if ($session->get('is_login') !== true) {
   <!-- DataTables & Plugins -->
   <script src="adminlte/plugins/datatables/jquery.dataTables.min.js"></script>
   <script src="adminlte/plugins/datatables-bs4/js/dataTables.bootstrap4.min.js"></script>
-  <script src="adminlte/plugins/datatablesresponsive/js/dataTables.responsive.min.js"></script>
-  <script src="adminlte/plugins/datatablesresponsive/js/responsive.bootstrap4.min.js"></script>
+  <script src="adminlte/plugins/datatablesresponsive/js/dataTables.responsive.min.js"></script>
+  <script src="adminlte/plugins/datatablesresponsive/js/responsive.bootstrap4.min.js"></script>
   <script src="adminlte/plugins/datatables-buttons/js/dataTables.buttons.min.js"></script>
   <script src="adminlte/plugins/datatables-buttons/js/buttons.bootstrap4.min.js"></script>
   <script src="adminlte/plugins/jszip/jszip.min.js"></script>
