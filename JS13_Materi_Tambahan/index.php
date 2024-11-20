@@ -31,7 +31,7 @@ if ($session->get('is_login') !== true) {
   <!-- Site wrapper -->
   <div class="wrapper">
     <!-- Navbar -->
-    <?php include('layout/header.php'); ?>
+    <?php include('layout/header.php');?>
     <!-- /.navbar -->
 
     <!-- Main Sidebar Container -->
@@ -43,7 +43,7 @@ if ($session->get('is_login') !== true) {
       </a>
 
       <!-- Sidebar -->
-      <?php include('layout/sidebar.php'); ?>/
+      <?php include('layout/sidebar.php');?>
       <!-- /.sidebar -->
     </aside>
 
