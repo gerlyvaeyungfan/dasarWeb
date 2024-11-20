@@ -23,7 +23,9 @@
 <body class="hold-transition sidebar-mini">
 <!-- Site wrapper -->
 <div class="wrapper">
-  
+    <!-- Navbar -->
+     <?php include('layout/header.php');?>
+     <!-- /.navbar -->
 
   <!-- Main Sidebar Container -->
   <aside class="main-sidebar sidebar-dark-primary elevation-4">
