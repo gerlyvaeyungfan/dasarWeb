@@ -36,7 +36,7 @@
     </a>
 
     <!-- Sidebar -->
-    <?php include('layout/sidebarr.php');?>
+    <?php include('layout/sidebar.php');?>
     <!-- /.sidebar -->
   </aside>
 
