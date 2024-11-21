@@ -105,6 +105,4 @@ if ($session->get('is_login') !== true) {
   <script src="adminlte/plugins/datatables-buttons/js/buttons.colVis.min.js"></script>
   <!-- AdminLTE App -->
   <script src="adminlte/dist/js/adminlte.min.js"></script>
-  <!-- AdminLTE for demo purposes -->
-  <script src="adminlte/dist/js/demo.js"></script>
 </body>
