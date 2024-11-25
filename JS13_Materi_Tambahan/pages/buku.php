@@ -1,8 +1,31 @@
 <?php
-require_once __DIR__ . '/../lib/Connection.php';
+function getKategori() {
+    // Pastikan koneksi sudah tersedia
+    include_once __DIR__ . '/../lib/Connection.php';
 
-// Ambil data kategori menggunakan fungsi
-$kategori = getKategori();
+    global $db, $use_driver; // Pastikan koneksi database global dapat diakses
+
+    $result = [];
+    $query = '';
+
+    if ($use_driver === 'mysql') {
+        $query = "SELECT kategori_id, kategori_nama FROM m_kategori";
+        $stmt = $db->query($query);
+        if ($stmt) {
+            $result = $stmt->fetch_all(MYSQLI_ASSOC);
+        }
+    } elseif ($use_driver === 'sqlsrv') {
+        $query = "SELECT kategori_id, kategori_nama FROM m_kategori";
+        $stmt = sqlsrv_query($db, $query);
+        if ($stmt) {
+            while ($row = sqlsrv_fetch_array($stmt, SQLSRV_FETCH_ASSOC)) {
+                $result[] = $row;
+            }
+        }
+    }
+
+    return $result;
+}
 ?>
 
 <section class="content-header">

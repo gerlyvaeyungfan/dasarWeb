@@ -28,6 +28,7 @@
         <thead>
           <tr>
             <th>No</th>
+            <th>Kode Kategori</th>
             <th>Nama Kategori</th>
             <th>Aksi</th>
           </tr>
