@@ -1,33 +1,7 @@
 <?php
-function getKategori() {
-    // Pastikan koneksi sudah tersedia
-    include_once __DIR__ . '/../lib/Connection.php';
-
-    global $db, $use_driver; // Pastikan koneksi database global dapat diakses
-
-    $result = [];
-    $query = '';
-
-    if ($use_driver === 'mysql') {
-        $query = "SELECT kategori_id, kategori_nama FROM m_kategori";
-        $stmt = $db->query($query);
-        if ($stmt) {
-            $result = $stmt->fetch_all(MYSQLI_ASSOC);
-        }
-    } elseif ($use_driver === 'sqlsrv') {
-        $query = "SELECT kategori_id, kategori_nama FROM m_kategori";
-        $stmt = sqlsrv_query($db, $query);
-        if ($stmt) {
-            while ($row = sqlsrv_fetch_array($stmt, SQLSRV_FETCH_ASSOC)) {
-                $result[] = $row;
-            }
-        }
-    }
-
-    return $result;
-}
+require_once __DIR__ . '/../lib/Connection.php';
+$kategori = getKategori();
 ?>
-
 <section class="content-header">
     <div class="container-fluid">
         <div class="row mb-2">
@@ -43,7 +17,6 @@ function getKategori() {
         </div>
     </div>
 </section>
-
 <!-- Main content -->
 <section class="content">
     <div class="card">
@@ -75,7 +48,6 @@ function getKategori() {
         </div>
     </div>
 </section>
-
 <!-- Modal Form -->
 <div class="modal fade" id="form-data" style="display: none;" aria-hidden="true">
     <form action="action/bukuAction.php?act=save" method="post" id="form-tambah" enctype="multipart/form-data">
@@ -128,19 +100,17 @@ function getKategori() {
         </div>
     </form>
 </div>
-
 <script>
     function tambahData() {
         $('#form-data').modal('show');
         $('#form-tambah').attr('action', 'action/bukuAction.php?act=save');
         $('#buku_kode').val('');
         $('#buku_nama').val('');
-        $('#kategori_id').val(''); // Sesuai ID dari select
+        $('#kategori_id').val('');
         $('#jumlah').val('');
         $('#deskripsi').val('');
         $('#gambar').val('');
     }
-
     function editData(id) {
         $.ajax({
             url: 'action/bukuAction.php?act=get&id=' + id,
@@ -153,13 +123,11 @@ function getKategori() {
                 $('#buku_nama').val(data.buku_nama);
                 $('#kategori_id').val(data.kategori_id).trigger('change');
                 $('#jumlah').val(data.jumlah);
-                $('#deskripsi').val(data.deskripsi || ''); // Pastikan deskripsi tidak kosong
+                $('#deskripsi').val(data.deskripsi || '');
                 $('#gambar').val(data.gambar);
             }
         });
     }
-
-
     function deleteData(id) {
         if (confirm('Apakah anda yakin?')) {
             $.ajax({
@@ -176,7 +144,6 @@ function getKategori() {
             });
         }
     }
-
     var tabelData;
     $(document).ready(function() {
         tabelData = $('#table-data').DataTable({
